@@ -46,13 +46,13 @@ jobs:
         run: |
           export KERNEL_DIR="$(pwd)"
           git clone --branch master https://github.com/DerGoogler/AnyKernel3-A70-KSU_Next.git $KERNEL_DIR/../AnyKernel3
-          mkdir $KERNEL_DIR/../files
+          mkdir -p $KERNEL_DIR/../files
 
       - name: Fetch SuSFS files
         run: |
           export KERNEL_DIR="$(pwd)"
           git clone --branch kernel-4.14 https://gitlab.com/simonpunk/susfs4ksu.git $KERNEL_DIR/../SuSFS
-          mkdir $KERNEL_DIR/../files
+          mkdir -p $KERNEL_DIR/../files
 
       - name: Setup KSU
         run: |
